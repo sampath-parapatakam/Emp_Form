@@ -1,4 +1,4 @@
-# Emp_Form
+# Employee Form Application (MEAN Stack App)
 MEAN stack application for employee data retrieval. (using JWT for sessions, Angular 7, NodeJS, ExpressJS, MySQL)
 
 ### Setup & run the application
