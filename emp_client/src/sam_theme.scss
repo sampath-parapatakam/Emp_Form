@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$sam-theme-primary:mat-palette($mat-teal);
+$sam-theme-accent: mat-palette($mat-lime, A400, A200, A700);
+$sam-theme-warn: mat-palette($mat-red);
+
+$sam-app-theme: mat-light-theme($sam-theme-primary,$sam-theme-accent,$sam-theme-warn);
+
+@include angular-material-theme($sam-app-theme);

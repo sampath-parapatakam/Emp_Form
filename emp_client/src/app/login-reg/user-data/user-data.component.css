@@ -1,0 +1,34 @@
+.container{
+  margin:0 40px;
+}
+
+.fill-space{
+  flex:1 1 auto;
+}
+
+.normal-form{
+  margin:10px;
+  height: 100%;
+}
+
+.controls-container{
+  width:100%;
+  padding:5%;
+}
+
+.controls-container>*{
+  width:100%;
+}
+
+.add-bottom-padding{
+  padding-bottom: 10px;
+}
+
+.add-bottom-padding mat-form-field{
+  width:50%;
+  margin:5px;
+}
+
+.button-row button{
+  margin:5px;
+}

@@ -1,0 +1,40 @@
+<div class="bckgrd_log">
+<div class="modal-dialog text-center">
+        <h2>Login Component</h2>
+    <div class="col-sm-8 main-section">
+        <div class="modal-content">
+            <div class="col-12 user-img">
+                <img src="../../../assets/images/logo.png" alt="background_image">
+            </div>
+            <form [formGroup]="loginForm" (submit)="login()">
+                <div class="form-group login">
+                    <i class="fas fa-user"></i>
+                    <input [class.is-invalid]="loginForm.get('username').invalid && 
+                                               loginForm.get('username').touched" formControlName="username" type="text" class="form-control" id="username" placeholder="Enter Username" [(ngModel)]="credentials.username">
+                    <div *ngIf="loginForm.get('username').invalid && loginForm.get('username').touched">
+                            <small *ngIf="loginForm.get('username').errors?.required; else elseif1" class="text-danger">Username is Required</small>
+                        <ng-template #elseif1>
+                            <small *ngIf="loginForm.get('username').errors?.minlength" class="text-danger">Username should be more than 3 characters</small>
+                        </ng-template>
+                    </div>
+                </div>
+                <div class="form-group login">
+                    <i class="fas fa-key"></i>
+                    <input [class.is-invalid]="loginForm.get('password').invalid && 
+                    loginForm.get('password').touched" formControlName="password" type="password" class="form-control" id="password" placeholder="Enter Password" [(ngModel)]="credentials.password">
+                    <div *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+                            <small *ngIf="loginForm.get('password').errors?.required" class="text-danger">Password is Required</small>
+                            <small *ngIf="loginForm.get('password').errors?.minlength" class="text-danger">Password should be minimum 6 characters</small>
+                    </div>
+                </div>
+            
+                <button type="submit" Value="Login" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i>Login</button>
+            
+                <div class="col-12 forgot">
+                    <a href="#">Forgot Password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
